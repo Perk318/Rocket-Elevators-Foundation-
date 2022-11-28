@@ -1,0 +1,23 @@
+<div class="row no-gutters wow slideInUp" data-wow-duration="1s">
+  <div class="col-md-12 home-form">
+  <br><br><br><br><br>
+    <%= select_tag "customer", options_from_collection_for_select(Customer.all, "id", "CompanyName"), prompt: "Customer" %>
+    <%= select_tag "building", options_from_collection_for_select(Building.all, "id", "id"), prompt: "Building" %>
+    <%= select_tag "battery", options_from_collection_for_select(Battery.all, "id", "id"), prompt: "Battery" %>
+    <%= select_tag "column", options_from_collection_for_select(Column.all, "id", "id"), prompt: "Column" %>
+    <%= select_tag "elevator", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "Elevator" %>
+<br><br><br>
+    <div class="col-md-12">
+		<label for="message">Project Description</label>
+		<textarea maxlength="10000" rows="3" class="form-control" name="projectdescription" id="project description"></textarea>
+	</div> <br><br><br>
+    <%# <%= submit_tag("Search", class: "btn btn-primary") %>
+  </div>
+</div>
+
+
+# <%# if you wanted a search funtion 
+# <div class="row" id="book_listing">
+#   <%= render partial: "book_list", locals: {books: @books}
+# </div> %>
+# <%# :include_blank => 'None'  %>

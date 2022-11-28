@@ -5,6 +5,7 @@ class Elevator < ApplicationRecord
   include ActiveModel::Dirty
 
   belongs_to :column
+  has_many :intervention
 
   require 'slack-notifier'
 

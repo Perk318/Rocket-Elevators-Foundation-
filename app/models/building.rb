@@ -4,5 +4,6 @@ class Building < ApplicationRecord
     belongs_to :customer
     has_many :batteries
     has_one :building_detail
+    belongs_to :intervention 
 
 end
